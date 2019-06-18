@@ -2,12 +2,12 @@
 
 movie_rank = ["닥터 스트레인지","스플릿","럭키"]
 
-print(movie_rank)
+print("41: " + str(movie_rank))
 
 
 #42 041의 movie_rank 리스트에 "배트맨"을 추가하라.
 movie_rank.append("배트맨")
-print(movie_rank)
+print("42: " + str(movie_rank))
 
 # --> 기존에 생성한 리스트에 데이터를 추가할 때는 append() 메서드를 사용합니다. append 메서드는 리스트 끝에 새로운 데이터를 추가합니다.
 
@@ -15,7 +15,7 @@ print(movie_rank)
 #43 movie_rank 리스트에는 아래와 같이 네 개의 영화 제목이 바인딩되어 있다. "슈퍼맨"을 "닥터 스트레인지"와 "스플릿" 사이에 추가하라.
 # movie_rank = ['닥터 스트레인지', '스플릿', '럭키', '배트맨']
 movie_rank.insert(1, "슈퍼맨")
-print(movie_rank)
+print("43: " + str(movie_rank))
 
 # --> insert 메서드는 새로운 값이 추가되는 위치를 지정할 수 있습니다. 인덱스는 슬라이싱과 동일하게 값과 값 사이에 맵핑됩니다. 인덱스 1번은 닥터 스트레인지와 스플릿 사이를 가리킵니다.
 
@@ -24,7 +24,7 @@ print(movie_rank)
 #44 movie_rank 리스트에서 '럭키'를 삭제하라.
 # movie_rank = ['닥터 스트레인지', '슈퍼맨', '스플릿', '럭키', '배트맨']
 movie_rank.remove("럭키")
-print(movie_rank)
+print("44: " + str(movie_rank))
 
 # --> remove() 메서드를 사용해서 입력한 값을 제거할 수 있습니다.
 # --> 혹은 del 키워드를 사용해서 값을 제거 할 수 있습니다. movie_rank[3]은 '럭키'를 가리키고 리스트에서 럭키를 삭제합니다.
@@ -36,26 +36,26 @@ print(movie_rank)
 movie_rank.remove("스플릿")
 movie_rank.remove("배트맨")
 # -> 또는 이 방법 del movie_rank[2:]
-print(movie_rank)
+print("45: " + str(movie_rank))
 
 
 #46 lang1과 lang2 리스트가 있을 때 lang1과 lang2의 원소를 모두 갖고 있는 langs 리스트를 만들어라.
 lang1 = ["C", "C++", "JAVA"]
 lang2 = ["Python", "Go", "C#"]
 langs = lang1 + lang2
-print(langs)
+print("46: " + str(langs))
 
 #$ --> 리스트의 덧셈은 두 개의 리스트를 합칩니다.
 
 #47 다음 리스트에서 최댓값과 최솟값을 출력하라. (힌트: min(), max() 함수 사용)
 nums = [1, 2, 3, 4, 5, 6, 7]
-print(min(nums))
-print(max(nums))
+print("47: " + "min " + str(min(nums)), "max " + str(max(nums)))
+
 
 #48 다음 리스트의 합을 출력하라.
 nums = [1, 2, 3, 4, 5]
 
-print(sum(nums))    
+print("48: " + str(sum(nums)))    
 
 # --> sum() 함수는 자료구조에 저장된 값들의 합을 반환합니다.
 
@@ -63,14 +63,14 @@ print(sum(nums))
 
 cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "쏘세지", "라면", "팥빙수", "김치전"]
 
-print(len(cook))
+print("49: " + str(len(cook)))
 
 # --> len() 함수는 문자열의 길이 뿐만 아니라 자료구조에 저장된 데이터의 개수 또한 계산할 수 있습니다.
 
 #50 다음 리스트의 평균을 출력하라.
 nums = [1,2,3,4,5]
 
-print(sum(nums)/len(nums))
+print("50: " + str(sum(nums)/len(nums)))
 
 
 # --> 자료구조에 저장된 데이터의 개수를 구하는 len() 함수를 사용하면 유지 보수에 좋은 코드가 됩니다. nums 의 값이 변경 (추가/삭제) 되더라도 평균 구하는 코드를 수정할 필요가 없습니다.
