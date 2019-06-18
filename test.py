@@ -2,16 +2,16 @@
 print("Hello World")
 
 #2 화면에 Mary's cosmetics을 출력하라. (중간에 '가 있음에 주의.)
-str = 'Mary\'s cosmetics'
-print(str)
+s = 'Mary\'s cosmetics'
+print(s)
 
 #3 화면에 아래 문장을 출력하라. (중간에 "가 있음에 주의.)
-str = "신씨가 소리질렀다. \"도둑이야\"."
-print(str)
+s = "신씨가 소리질렀다. \"도둑이야\"."
+print(s)
 
 #4 화면에 "C:\Windows"를 출력하라.
-str = "C:\\\\Windows"
-print(str)
+s = "C:\\\\Windows"
+print(s)
 
 #5 다음 코드를 실행해보고 \t와 \n의 역할을 설명하라.
 print("안녕하세요.\n만나서 \t\t반갑습니다.")
