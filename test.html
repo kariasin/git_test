@@ -1,6 +1,26 @@
 <html>
 <head>
 <script>
+class Foo{
+    constructor(prop){
+        this.prop = prop;
+    }
+
+    static staticMethod(){
+        return 'staticMethod';
+    }
+
+    prototypeMethod(){
+        return this.prop;
+    }
+}
+
+console.log(Foo.staticMethod());
+
+
+const foo = new Foo([1,2]);
+
+console.log(foo.staticMethod());
 </script>
 </head>
 <body>
