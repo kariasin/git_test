@@ -11,8 +11,17 @@
 a = [1,2]
 sum = 0
 
-for i in range(1,10):
-    sum += a[i]
-    a.append(sum)
-
+while True:
+    sum = a[-1] + a[-2]
+    if sum < 4000000:
+        a.append(sum)
+    else:
+        break
+    #print("i ",  i, a[i])
 print(a)
+sum = 0    
+for i in a:
+    if i % 2 == 0:
+        sum += i
+
+print(sum)
