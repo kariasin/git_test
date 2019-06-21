@@ -140,3 +140,56 @@ for i in range(1,1000):
 
 
 
+#12. 문제
+
+import operator
+a = [1]
+sum = 1
+temp_tu = ()
+for i in range(2,5):
+    sum += i 
+    a.append(sum)
+
+b = {}
+for i in a:
+    for j in range(1,11):
+        if i % j == 0:
+            b[i] = 1
+            temp_tu += (i, j)
+    b[i] = set(temp_tu)
+    temp_tu = ()
+print(b)
+
+a = b.values()
+print(b[:-1])
+
+
+# b = {"1":(1,2)}
+# b["1"] = (3,4) + (5,6)
+
+# print(b["1"])
+
+
+######################################################################
+# 작성중
+
+import operator
+a = [1]
+sum = 1
+temp_tu = ()
+for i in range(2,5):
+    sum += i 
+    a.append(sum)
+
+b = {}
+for i in a:
+    for j in range(1,11):
+        if i % j == 0:
+            b[i] = 1
+            temp_tu += (i, j)
+    b[i] = set(temp_tu)
+    temp_tu = ()
+print(b)
+
+a = b.values()
+print(a)
