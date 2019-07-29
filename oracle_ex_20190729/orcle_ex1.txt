@@ -1,0 +1,72 @@
+
+1. 연봉이 12000 이상되는 직원들의 LAST_NAME 및 연봉을 조회한다.
+
+select last_name, salary
+from employees
+where salary >= 12000;
+
+2. 사원번호가 176 인 사람의 LAST_NAME 과 부서 번호를 조회한다.
+
+select last_name, department_id
+from employees
+where employee_id = '176';
+
+3. 연봉이 5000 에서 12000의 범위 이외인 사람들의 
+    LAST_NAME 및 연봉을 조회힌다.
+
+select last_name, salary
+from employees
+where salary >= 5000 and salary <= 12000;
+
+4. 1998/02/20 일부터 1998/05/01 사이에 고용된 사원들의 LAST_NAME 사번, 고용일자를 조회한다.
+- 고용일자 순으로 정렬한다.
+
+select last_name, job_id, hire_date
+from employees
+where 
+to_char(hire_date,'yyyy/mm/dd') >= '1998/02/20'
+and to_char(hire_date, 'yyyy/mm/dd') <= '1998/05/01';
+
+ 5. 20 번 및 50 번 부서에서 근무하는 모든 사원들의 
+    LAST_NAME 및 부서 번호를 알파벳순으로 조회한다.
+
+select last_name, department_id
+from employees
+where department_id in(20,50)
+order by last_name
+
+6. 20 번 및 50 번 부서에 근무하며, 연봉이 5000 ~ 12,000 사이인 사원들의 LAST_NAME 및 연봉을 조회한다.
+
+select last_name, salary
+from employees
+where department_id in(20,50)
+and salary >= 5000
+and salary <= 12000
+
+7. 2017년도에 고용된 모든 사람들의 LAST_NAME 및 고용일을 조회한다.
+
+select last_name, hire_date
+from employees
+where substr(hire_date,0,2) = '17' 
+
+8. 매니저가 없는 사람들의 LAST_NAME 및 JOB_ID 를 조회한다.
+
+select *
+from employees
+where manager_id is null;
+
+9. 커미션을 버는 모든 사원들의 LAST_ANME, 연봉 및 커미션을 조회한다.
+- 연봉 역순, 커미션 역순차로 정렬한다.
+
+select last_name, salary, commission_pct
+from employees
+where commission_pct is not null
+order by salary desc,
+commission_pct desc;
+
+10.LAST_NAME 의 네번째 글자가 a 인 사원들의 LAST_NAME 을 조회한다.
+
+select last_name
+from employees
+where substr(last_name,4,1) = 'a'
+
